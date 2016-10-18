@@ -1,6 +1,6 @@
 require 'chunky_png'
 
-def make_avatar(size, cluster, filename)
+def make_image(size, cluster, filename)
   png = ChunkyPNG::Image.new(size, size, ChunkyPNG::Color.rgba(255, 255, 255, 128))
   hex = "%06x" % (rand * 0xffffff)
   randomColor = ChunkyPNG::Color.from_hex(hex)
@@ -44,5 +44,5 @@ end
 
 
 10.times do |i|
-  make_avatar(120, 12, "filename-#{i}");
+  make_image(120, 12, "filename-#{i}");
 end
